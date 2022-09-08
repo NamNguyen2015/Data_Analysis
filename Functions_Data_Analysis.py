@@ -15,6 +15,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from statistics import mean
 import matplotlib.cbook as cbook
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+
 
 # %% get path file Design_limits and Angles
 path = pathlib.Path(os.getcwd())
@@ -57,7 +60,11 @@ def Pz_i_j(df,i,j):
             
         df_P_i_j=df[(df['Pier']=='P')&(df['No']==i)&(df['Point']==j)]
         
-        fig, ax =plt.subplots(constrained_layout=False)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
+        #fig, ax =plt.subplots(constrained_layout=False)
         x=df_P_i_j["Date"]
         y=df_P_i_j["Z_mm"]
         ax.plot(x,y,  color='b', linestyle="-", label="Z")
@@ -79,7 +86,10 @@ def Pxy_i_j(df,i,j):
     try:
         
         df_P_i_j=df[(df['Pier']=='P')&(df['No']==i)&(df['Point']==j)]
-        fig,ax=plt.subplots(constrained_layout=False)
+        #fig,ax=plt.subplots(constrained_layout=False)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
         x=df_P_i_j["Date"]
         
         y1=df_P_i_j["X_mm"]
@@ -109,7 +119,10 @@ def Pz_Plot(df, i):
         y = f.reset_index()["Z_mm"]
         #x_cr, y_cr = correction(epsilon_pz[i-1], x, y)
 
-        fig, ax = plt.subplots(constrained_layout=False)
+        #fig, ax = plt.subplots(constrained_layout=False)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
         ax.plot(x,y, color='r', label='Z')
        # ax.plot(x_cr, y_cr, color='g', label='Z-correction')
         #ax.hlines(y=settlement_pz[i-1], color='b', xmin=x_cr[0], xmax=x_cr[len(
@@ -173,7 +186,10 @@ def Dz_Plot(df, i):
         y = f.reset_index()["Z_mm"]
         #x_cr, y_cr = correction(epsilon_dz[i-1], x, y)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
         ax.plot(x,y, color='r', label='Z',linestyle='-')
 
         #ax.plot(x_cr, y_cr, color='g', label='Z-correction')
@@ -218,7 +234,11 @@ def P_XY_Plot(df, i):
         y1 = f.reset_index()["LONGITUDINAL"]
         y2 = f.reset_index()["TRANVERSAL"]
 
-        fig, ax = plt.subplots(constrained_layout=False)
+        #fig, ax = plt.subplots(constrained_layout=False)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
         ax.plot(x, y1, color='r', label='Longitudinal', linestyle='-')
         ax.plot(x, y2, color='g', label='Traversal', linestyle='-')
         ax.hlines(y=long_Pos[i-1], color='b', xmin=x[0], xmax=x[len(x)-1],
@@ -262,7 +282,12 @@ def D_XY_Plot(df, i):
         y1 = f.reset_index()["LONGITUDINAL"]
         y2 = f.reset_index()["TRANVERSAL"]
 
-        fig, ax = plt.subplots(constrained_layout=False)
+        #fig, ax = plt.subplots(constrained_layout=False)
+        
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
         ax.plot(x,y1, color='r', label='Longitudinal',linestyle='-')
         ax.plot(x,y2, color='b', label='Traversal',linestyle='-')
         
@@ -372,7 +397,12 @@ def PzCor_Plot(df, i):
         y = f.reset_index()["Z_mm"]
         x_cr, y_cr = correction(epsilon_pz[i-1], x, y)
 
-        fig, ax = plt.subplots(constrained_layout=False)
+        #fig, ax = plt.subplots(constrained_layout=False)
+        
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
         #ax.plot(x,y, color='r', label='Z',linestyle=':')
         ax.plot(x_cr, y_cr, color='g', label='Z-correction')
         ax.hlines(y=settlement_pz[i-1], color='b', xmin=x_cr[0], xmax=x_cr[len(
@@ -400,7 +430,12 @@ def Dzcor_Plot(df, i):
         y = f.reset_index()["Z_mm"]
         x_cr, y_cr = correction(epsilon_dz[i-1], x, y)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
+        
         #ax.plot(x,y, color='r', label='Z',linestyle='-')
 
         ax.plot(x_cr, y_cr, color='g', label='Z-correction')
@@ -453,7 +488,10 @@ def P_XYcor_Plot(df, i):
         x1_cr, y1_cr = correction(eps_L[i-1], x, y1)
         x2_cr, y2_cr = correction(eps_T[i-1], x, y2)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
         ax.plot(x1_cr, y1_cr, color='r', label='Longitudinal', linestyle='-')
         ax.plot(x2_cr, y2_cr, color='g', label='Traversal', linestyle='-')
         ax.hlines(y=long_Pos[i-1], color='b', xmin=x[0], xmax=x[len(x)-1],
@@ -500,7 +538,11 @@ def D_XY_cor_Plot(df, i):
         x1_cr, y1_cr = correction(eps_L[i-1], x, y1)
         x2_cr, y2_cr = correction(eps_T[i-1], x, y2)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
         #ax.plot(x,y1, color='r', label='Longitudinal',linestyle='-.')
         #ax.plot(x,y2, color='g', label='Traversal',linestyle='-.')
         ax.plot(x1_cr, y1_cr, color='r',
@@ -534,7 +576,11 @@ def Pzcpr_Plot(df, i):
         y = f.reset_index()["Z_mm"]
         x_cr, y_cr = correction(epsilon_pz[i-1], x, y)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
         ax.plot(x, y, color='r', label='Z', linestyle=':')
         ax.plot(x_cr, y_cr, color='g', label='Z-correction')
         ax.hlines(y=settlement_pz[i-1], color='b', xmin=x_cr[0], xmax=x_cr[len(
@@ -562,7 +608,11 @@ def Dzcpr_Plot(df, i):
         y = f.reset_index()["Z_mm"]
         x_cr, y_cr = correction(epsilon_dz[i-1], x, y)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
         ax.plot(x, y, color='r', label='Z', linestyle='-')
 
         ax.plot(x_cr, y_cr, color='g', label='Z-correction')
@@ -615,7 +665,11 @@ def P_XYcpr_Plot(df, i):
         x1_cr, y1_cr = correction(eps_L[i-1], x, y1)
         x2_cr, y2_cr = correction(eps_T[i-1], x, y2)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
+        
         ax.plot(x, y1, color='orange', linestyle='-', label='Longitudinal')
         ax.plot(x, y2, color='blue', linestyle='-', label='Traversal')
         ax.plot(x1_cr, y1_cr, color='r',
@@ -665,7 +719,10 @@ def D_XYcpr_Plot(df, i):
         x1_cr, y1_cr = correction(eps_L[i-1], x, y1)
         x2_cr, y2_cr = correction(eps_T[i-1], x, y2)
 
-        fig, ax = plt.subplots(ncols=1, nrows=1)
+        #fig, ax = plt.subplots(ncols=1, nrows=1)
+        fig = Figure()
+        canvas = FigureCanvas(fig)
+        ax = fig.add_subplot(111)
         ax.plot(x, y1, color='orange', label='Longitudinal', linestyle='-')
         ax.plot(x, y2, color='b', label='Traversal', linestyle='-')
         ax.plot(x1_cr, y1_cr, color='r',

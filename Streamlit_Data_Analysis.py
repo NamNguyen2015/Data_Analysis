@@ -6,17 +6,17 @@ Created on Fri Aug 26 12:37:10 2022
 @author: namnguyen
 """
 
-import numpy as np
-import math
+#import numpy as np
+#import math
 import streamlit as st
-from math import pi, cos, sin
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from matplotlib.animation import PillowWriter
+#from math import pi, cos, sin
+#import matplotlib.pyplot as plt
+#import matplotlib.animation as animation
+#from matplotlib.animation import PillowWriter
 import pandas as pd
 import os
-import base64
-from PIL import Image
+#import base64
+#from PIL import Image
 import io
 path= os.getcwd()
 

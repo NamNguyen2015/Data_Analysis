@@ -8,15 +8,15 @@ Created on Wed Aug 31 10:00:28 2022
 
 import pandas as pd
 import numpy as np
-import re
+#import re
 import os
 import pathlib
 import matplotlib.pyplot as plt
-import seaborn as sns
-from statistics import mean
-import matplotlib.cbook as cbook
-from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
-from matplotlib.figure import Figure
+#import seaborn as sns
+#from statistics import mean
+#import matplotlib.cbook as cbook
+#from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+#from matplotlib.figure import Figure
 
 # %% get path file Design_limits and Angles
 path = pathlib.Path(os.getcwd())
@@ -165,8 +165,7 @@ def Pz_Plot(df, i):
 
 # %%Dz
 def Dz_Plot(df, i):
-    epsilon_dz = df_design_limits['D']['EPSILON Z']
-    settlement_dz = df_design_limits['D']['SETTLEMENT']
+   
     try:
         df_D_i = df[(df['Pier'] == 'D') & (df['No'] == i)]
         f = pd.pivot_table(
