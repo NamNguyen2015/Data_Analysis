@@ -5,5 +5,5 @@ matplotlib
 xlsxwriter
 Openpyxl 
 openpyxl 
-
+pip
 
