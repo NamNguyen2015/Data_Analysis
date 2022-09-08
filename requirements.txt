@@ -3,7 +3,6 @@ pandas
 streamlit
 matplotlib
 xlsxwriter
-libtk8.6
 Openpyxl 
 openpyxl 
 os
