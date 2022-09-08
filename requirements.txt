@@ -5,3 +5,5 @@ matplotlib
 xlsxwriter
 libtk8.6
 Openpyxl 
+os
+io
