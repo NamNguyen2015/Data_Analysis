@@ -25,7 +25,7 @@ import final_Data_Analysis as DA
 st.title('📊 Apply Data Science in Civil Engineering')
 st.image("https://media-exp1.licdn.com/dms/image/C4E0BAQF-5O5stYOVnA/company-logo_200_200/0/1519880154681?e=2147483647&v=beta&t=JfMPNm2p8aQC7iHLqp8S4096lFDmShsodp8A73sRnWQ",width=100)
 st.header('Company: CFC.SL' )
-st.markdown("**Pedram Manouchehri** | Msc. Civil Engineering ")
+st.markdown("**Pedram Manouchehri** | PhD. Structrure Engineering ")
 st.markdown("**Nam Nguyen** | PhD. Applied Maths ")
   
 st.write('**************************************')
