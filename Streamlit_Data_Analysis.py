@@ -26,7 +26,7 @@ st.title('📊 Apply Data Science in Civil Engineering')
 st.image("https://media-exp1.licdn.com/dms/image/C4E0BAQF-5O5stYOVnA/company-logo_200_200/0/1519880154681?e=2147483647&v=beta&t=JfMPNm2p8aQC7iHLqp8S4096lFDmShsodp8A73sRnWQ",width=100)
 st.header('Company: CFC.SL' )
 st.markdown("**Pedram Manouchehri** | Msc. Civil Engineering ")
-st.markdown("**Nam Nguyen** | Msc. Data Science ")
+st.markdown("**Nam Nguyen** | PhD. Applied Maths ")
   
 st.write('**************************************')
 
@@ -40,12 +40,13 @@ st.markdown("""
 
 st.image(path+r'/High_Bridge.png', width=400) # Manually Adjust the width of the image as per requirement
       
-st.text("In this project, we analize an excel dataset which collect the  moverments of a  bridge  since 2018 to July 2022. Our goal is to get a final neat data and graphics. In the process of obtaining the graphics, we have to remove the dispersions signals.")
+st.write("In this project, we analize an excel dataset which collects the  movements of a  bridge from 2018 to July 2022.")
+st.write("Our goal is to analyze the quality of the data, fix unacceptable dispersions and develop practical and sound plots.")
 
 image = "https://docs.streamlit.io/sharing-image-facebook.jpg"
 
 st.image(image, caption='The fastest way to build and share data apps')
-st.write('Streamlit is an open source app framework in Python language. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy(latex), NumPy, pandas, Matplotlib etc.')
+st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy(latex), NumPy, pandas, Matplotlib etc.')
 
 st.write('**************************************')
 
@@ -72,11 +73,11 @@ if uploaded_file is not None:
 st.write('**************************************')
 st.subheader("Show the final excel file")
 D_ex=DA.D_ex
-st.write("There exported file has"+str(len(D_ex.keys()))+"sheet_names")
+st.write("The file has "+str(len(D_ex.keys()))+"sheet_names")
 
 option=list(D_ex.keys())
 
-data=st.selectbox("which data do you want to execute?", option,0)
+data=st.selectbox("which tab do you want to execute?", option,0)
    
 st.write(D_ex[data].head(100))
 
@@ -125,7 +126,7 @@ for k, v in dsa.items():
 
   
         
-st.markdown("**Rotaion matrix**")
+st.markdown("**Rotation matrix**")
 
 st.image("https://www.researchgate.net/profile/Adrian-Martinez-Vargas/publication/237030100/figure/fig3/AS:667659175739402@1536193760987/Definition-of-the-rotation-matrices-trough-the-axis-x-y-and-z-taken-from-Meyer-2000.ppm", width=300)
 
