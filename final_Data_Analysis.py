@@ -15,7 +15,9 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from statistics import mean 
 from datetime import datetime
-import Functions_Data_Analysis as FDA
+from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
+from matplotlib.figure import Figure
+import Functions_Data_Analysis_220908 as FDA
 
 
 
@@ -157,7 +159,7 @@ for k in K:
 import copy
 D_ex=copy.deepcopy(main_dict)
 # =============================================================================
-# #change to format date
+# #change to format date// I do not recommend to change formatdate
 # for k in main_dict.keys(): 
 #     D_ex[k].index=pd.to_datetime(D_ex[k].index).strftime('%Y-%m-%d')
 #     
@@ -169,18 +171,7 @@ with pd.ExcelWriter(path_output/'XYZ_joined.xlsx') as writer:
     for k, v in D_ex.items():
         v.to_excel(writer, sheet_name=k)
        
-# =============================================================================
-# #%%
-# vvv=D_ex['D-1-0'].index
-# # convert to string
-# date_time_str = vvv.strftime("%Y-%m-%d", format=datetime64[ns])
-# 
-# 
-# print('DateTime String:', date_time_str)
-# 
-# 
-# 
-# =============================================================================
+
 
 #%% Reset index in main dictionary
 #For each point the dictionary key is divided into three catergories: 

@@ -22,23 +22,19 @@ path= os.getcwd()
 
 import final_Data_Analysis as DA
 #%%
-st.title('📊 Data Science & Civil Engineering')
-st.image(Image.open(path+r'/logo_CFC.png'),width=100)
+st.title('📊 Apply Data Science in Civil Engineering')
+st.image("https://media-exp1.licdn.com/dms/image/C4E0BAQF-5O5stYOVnA/company-logo_200_200/0/1519880154681?e=2147483647&v=beta&t=JfMPNm2p8aQC7iHLqp8S4096lFDmShsodp8A73sRnWQ",width=100)
 st.header('Company: CFC.SL' )
-
-
-st.subheader("Author: Nam Nguyen")
-    
+st.markdown("**Pedram Manouchehri** | Msc. Civil Engineering ")
+st.markdown("**Nam Nguyen** | Msc. Data Science ")
   
 st.write('**************************************')
-
-
 
 st.subheader("Introduction:")
 #st.markdown('Streamlit is **_really_ cool**.')
 st.markdown("""
-*  Python libraries: pandas, streamlit, numpy, matplotlib
-*  Linked: [Data_Analysis](https://github.com/NamNguyen2015/Data_Analysis)
+*  **Python libraries:** pandas, streamlit, os, io, matplotlib
+*  **Linked:** [Data_Analysis](https://github.com/NamNguyen2015/Data_Analysis)
              
 """)
 
@@ -50,7 +46,9 @@ image = "https://docs.streamlit.io/sharing-image-facebook.jpg"
 
 st.image(image, caption='The fastest way to build and share data apps')
 st.write('Streamlit is an open source app framework in Python language. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy(latex), NumPy, pandas, Matplotlib etc.')
+
 st.write('**************************************')
+
 st.subheader("[Optional] Show the drop/drag file:")
 
 uploaded_file = st.file_uploader("Upload EXCEL", type=".xlsx")
@@ -71,14 +69,8 @@ if uploaded_file is not None:
         st.write(dfm[k].head(10))
         
 
-
-
-
 st.write('**************************************')
 st.subheader("Show the final excel file")
-
-
-
 D_ex=DA.D_ex
 st.write("There exported file has"+str(len(D_ex.keys()))+"sheet_names")
 
@@ -138,7 +130,15 @@ st.markdown("**Rotaion matrix**")
 st.image("https://www.researchgate.net/profile/Adrian-Martinez-Vargas/publication/237030100/figure/fig3/AS:667659175739402@1536193760987/Definition-of-the-rotation-matrices-trough-the-axis-x-y-and-z-taken-from-Meyer-2000.ppm", width=300)
 
 
+st.markdown("**Fixing dispersion signal-fundamental problem**")
 
+st.text("")
+
+st.markdown("""
+            * [See published paper about thresholds](https://opg.optica.org/oe/fulltext.cfm?uri=oe-20-27-28319&id=246832)
+            * [See document about step detection algorithm](https://dsp.stackexchange.com/questions/47227/need-a-better-step-detection-algorithm)
+            
+            """)
 
 df=DA.df    
 
