@@ -12,7 +12,7 @@ import re
 import os
 import pathlib
 import matplotlib.pyplot as plt
-import seaborn as sns
+#import seaborn as sns
 from statistics import mean
 import matplotlib.cbook as cbook
 from matplotlib.backends.backend_agg import FigureCanvasAgg as FigureCanvas
