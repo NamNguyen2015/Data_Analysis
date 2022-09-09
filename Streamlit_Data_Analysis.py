@@ -25,8 +25,8 @@ import final_Data_Analysis as DA
 st.title('📊 Apply Data Science in Civil Engineering')
 st.image("https://media-exp1.licdn.com/dms/image/C4E0BAQF-5O5stYOVnA/company-logo_200_200/0/1519880154681?e=2147483647&v=beta&t=JfMPNm2p8aQC7iHLqp8S4096lFDmShsodp8A73sRnWQ",width=100)
 st.header('Company: CFC.SL' )
-st.markdown("**Pedram Manouchehri** | PhD. Structural Engineering ")
-st.markdown("**Nam Nguyen** | PhD. Applied Maths ")
+st.markdown("**Pedram Manouchehri** ")
+st.markdown("**Nam Nguyen** ")
   
 st.write('**************************************')
 
@@ -49,7 +49,7 @@ st.write("Our goal is to analyze the quality of the data, fix unacceptable dispe
 image = "https://docs.streamlit.io/sharing-image-facebook.jpg"
 
 st.image(image, caption='The fastest way to build and share data apps')
-st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy(latex), NumPy, pandas, Matplotlib etc.')
+st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy, NumPy, pandas, Matplotlib etc.')
 
 st.write('**************************************')
 
@@ -76,7 +76,7 @@ if uploaded_file is not None:
 st.write('**************************************')
 st.subheader("Show the final excel file")
 D_ex=DA.D_ex
-st.write("The file has "+str(len(D_ex.keys()))+"sheet_names")
+st.write("The file has "+str(len(D_ex.keys()))+" sheet_names")
 
 option=list(D_ex.keys())
 
