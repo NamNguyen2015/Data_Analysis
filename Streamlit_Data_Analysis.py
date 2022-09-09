@@ -39,7 +39,7 @@ st.markdown("""
 """)
 
 st.image(path+r'/High_Bridge.png', width=400)# Manually Adjust the width of the image as per requirement
-st.image(path+r'/monitoring/FFL-DE-DD-ST09-SUP1-SHP-DRA-0311[5.0].png', width=400)
+#st.image(path+r'/monitoring/FFL-DE-DD-ST09-SUP1-SHP-DRA-0311[5.0].png', width=400)
 def extract_data(feed):
     data = []
     with pdfplumber.load(feed) as pdf:
@@ -47,7 +47,7 @@ def extract_data(feed):
         for p in pages:
             data.append(p.extract_tables())
     return None # build more code to return a dataframe 
-uploaded_file = st.file_uploader('Choose your .pdf file', type="pdf")
+uploaded_file = st.file_uploader('Choose your PDF file', type="pdf")
 if uploaded_file is not None:
     df = extract_data(uploaded_file)  
 
