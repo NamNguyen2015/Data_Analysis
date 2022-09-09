@@ -46,7 +46,7 @@ st.markdown("**Previous public:** [High Bridge Monitoring](https://github.com/Na
 st.write("In this project, we analize an excel dataset which collects the  movements of a  bridge from 2018 to July 2022.")
 st.write("Our goal is to analyze the quality of the data, fix unacceptable dispersions and develop practical and sound plots.")
 
-image = "https://docs.streamlit.io/sharing-image-facebook.jpg"
+image = "https://upload.wikimedia.org/wikipedia/commons/7/77/Streamlit-logo-primary-colormark-darktext.png"
 
 st.image(image, caption='The fastest way to build and share data apps')
 st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy, NumPy, pandas, Matplotlib etc.')
