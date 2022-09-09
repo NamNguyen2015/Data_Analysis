@@ -38,8 +38,8 @@ st.markdown("""
              
 """)
 
-st.image(path+r'/High_Bridge.png', width=400) # Manually Adjust the width of the image as per requirement
-      
+st.image(path+r'/High_Bridge.png', width=400)# Manually Adjust the width of the image as per requirement
+st.image(path+r'/monitoring/FFL-DE-DD-ST09-SUP1-SHP-DRA-0311[5.0].pdf', width=400)      
 st.write("In this project, we analize an excel dataset which collects the  movements of a  bridge from 2018 to July 2022.")
 st.write("Our goal is to analyze the quality of the data, fix unacceptable dispersions and develop practical and sound plots.")
 
