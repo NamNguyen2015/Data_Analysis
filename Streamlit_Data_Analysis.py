@@ -39,8 +39,7 @@ st.markdown("""
 """)
 
 st.image(path+r'/High_Bridge.png', width=400)# Manually Adjust the width of the image as per requirement
-st.markdown("**See image:** [Design image](https://github.com/NamNguyen2015/Data_Analysis/blob/main/monitoring/FFL-DE-DD-ST09-SUP1-SHP-DRA-0311%5B5.0%5D.png)")
-
+st.markdown("**See image:** [Design image](https://github.com/NamNguyen2015/Data_Analysis/blob/main/monitoring/FFL-DE-DD-ST09-SUP1-SHP-DRA-0311%5B5.0%5D.pdf)
 
 #st.image(path+r'/monitoring/FFL-DE-DD-ST09-SUP1-SHP-DRA-0311[5.0].jpeg', width=500)
 
