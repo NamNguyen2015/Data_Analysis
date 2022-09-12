@@ -242,19 +242,19 @@ if Download_btn:
 # ## To download image we can have two approaches: first, save to file and then download; second, save to memory and then download
 # ##the second:
 # 
-# g=[fig1, fig2]
+g=[fig1, fig2]
 # 
-# for i in range(1,len(g)+1):
+for i in range(1,len(g)+1):
 #     
-#     fn='fig'+str(i)            
-#     j=g[i-1].savefig(fn)    
-#     img = io.BytesIO()
-#     j.savefig(img)
-#     
-# btn = st.download_button(
-#    label="DOWNLOAD IMAGES",
-#    data=img,
-#    file_name=fn,  
+    fn='fig'+str(i)            
+    j=g[i-1].savefig(fn)    
+    img = io.BytesIO()
+    j.savefig(img)
+    
+    btn = st.download_button(
+    label="DOWNLOAD THE"+str(i)+"IMAGE",
+     data=img,
+    file_name=fn,  
 # )
 #  
 # 
