@@ -43,7 +43,8 @@ image = "https://upload.wikimedia.org/wikipedia/commons/7/77/Streamlit-logo-prim
 
 st.image(image, caption='The fastest way to build and share data apps')
 st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy, NumPy, pandas, Matplotlib etc.')
-st.image(path+r'/DA_flow.jpg', width=600)
+
+st.markdown("**About project**")
 st.image(path+r'/High_Bridge.png', width=600)# Manually Adjust the width of the image as per requirement
 st.markdown("**See image:** [Design image](https://github.com/NamNguyen2015/Data_Analysis/blob/main/monitoring/FFL-DE-DD-ST09-SUP1-SHP-DRA-0311%5B5.0%5D.pdf)")
 st.markdown("**Previous public:** [High Bridge Monitoring](https://github.com/NamNguyen2015/Data_Analysis/blob/main/monitoring/High%20Bridge%20Monitoring.pdf)")
@@ -51,7 +52,7 @@ st.markdown("**Previous public:** [High Bridge Monitoring](https://github.com/Na
 
 st.write("In this project, we analize an excel dataset which collects the  movements of a  bridge from 2018 to July 2022.")
 st.write("Our goal is to analyze the quality of the data, fix unacceptable dispersions and develop practical and sound plots.")
-
+st.image(path+r'/DA_flow.jpg', width=600)
 
 st.write('**************************************')
 
