@@ -246,10 +246,9 @@ for i in range(1,len(g)+1):
     fn='fig'+str(i)            
     j=g[i-1].savefig(fn)    
     img = io.BytesIO()
-    j.savefig(img)
-    
-    btn = st.download_button(
-    label="DOWNLOAD THE"+str(i)+"IMAGE",
+    j.savefig(img)    
+ btn = st.download_button(
+    label="DOWNLOAD IMAGE" +str(i),
      data=img,
     file_name=fn, )
 
