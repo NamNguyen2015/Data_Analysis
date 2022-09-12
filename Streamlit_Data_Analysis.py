@@ -10,7 +10,7 @@ Created on Fri Aug 26 12:37:10 2022
 #import math
 import streamlit as st
 #from math import pi, cos, sin
-#import matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 #import matplotlib.animation as animation
 #from matplotlib.animation import PillowWriter
 import pandas as pd
