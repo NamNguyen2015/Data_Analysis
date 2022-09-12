@@ -37,12 +37,12 @@ st.markdown("""
 *  **Linked:** [Data_Analysis](https://github.com/NamNguyen2015/Data_Analysis)
              
 """)
-st.markdown("**Plotly Dash vs Streamlit — Which is the best?**")
-st.markdown("[History of GitHub stars for both Plotly Dash and Streamlit](https://towardsdatascience.com/plotly-dash-vs-streamlit-which-is-the-best-library-for-building-data-dashboard-web-apps-97d7c98b938c)")
-image = "https://upload.wikimedia.org/wikipedia/commons/7/77/Streamlit-logo-primary-colormark-darktext.png"
+#st.markdown("**Plotly Dash vs Streamlit — Which is the best?**")
+#st.markdown("[History of GitHub stars for both Plotly Dash and Streamlit](https://towardsdatascience.com/plotly-dash-vs-streamlit-which-is-the-best-library-for-building-data-dashboard-web-apps-97d7c98b938c)")
+#image = "https://upload.wikimedia.org/wikipedia/commons/7/77/Streamlit-logo-primary-colormark-darktext.png"
 
-st.image(image, caption='The fastest way to build and share data apps')
-st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy, NumPy, pandas, Matplotlib etc.')
+#st.image(image, caption='The fastest way to build and share data apps')
+#st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy, NumPy, pandas, Matplotlib etc.')
 
 st.markdown("**About project**")
 st.image(path+r'/High_Bridge.png', width=600)# Manually Adjust the width of the image as per requirement
