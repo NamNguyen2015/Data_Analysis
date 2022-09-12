@@ -50,7 +50,7 @@ image = "https://upload.wikimedia.org/wikipedia/commons/7/77/Streamlit-logo-prim
 
 st.image(image, caption='The fastest way to build and share data apps')
 st.write('Streamlit is an open source app framework in Python. It helps us create web apps for data science and machine learning in a short time. It is compatible with major Python libraries such as scikit-learn, Keras, PyTorch, SymPy, NumPy, pandas, Matplotlib etc.')
-
+st.image(path+r'/DA_flow.jpg', width=600)
 st.write('**************************************')
 
 st.subheader("[Optional] Show the drop/drag file:")
